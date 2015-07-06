@@ -1,30 +1,20 @@
 ---
 layout: post
-title: Bootstrap常用资源
+title: 计算机视觉领域常用资源
 category: 资源
-tags: Bootstrap
-description: 列举自己搜集的Bootstrap资源，给像我这样前端不太行的WEB开发者
 ---
 
-### 官方资源
+### 推荐站点
 
-- [官方首页](http://twitter.github.io/bootstrap/)
+- [VALSE在线讨论](http://valseonline.org/portal.php)
+
+  视觉与学习青年学者研讨会(Vision And Learning SEminar, 简称VALSE)的主要目标是为计算机视觉、图像处理、模式识别与机器学习等研究领域内的华人青年学者提供深入学术交流的舞台。VALSE QQ群：364188996，VALSE-B QQ群：422075165
   
-### 字体图标
+### 开源软件
 
-- [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+- [VLFeat](http://www.vlfeat.org/)
 
-  扩展bootstrap的图标，是基于css的，非常漂亮，而且还支持视网膜屏，但是貌似手机上没法支持（测试过UC）
+  An open source library implements popular computer vision algorithms including HOG, SIFT, MSER, k-means, hierarchical k-means, agglomerative information bottleneck, SLIC superpixels, and quick shift.
 
-### 下拉按钮
 
-- [Bootstrap Mutiselect](http://davidstutz.github.io/bootstrap-multiselect/)
-
-  多选下拉列表插件
-
-### 表单扩展
-
-- [Bootstrap Form Helpers](http://vincentlamanna.com/BootstrapFormHelpers/index.html)
-
-  扩展常用的表单功能，包括日期选择、时间选择等
 
