@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>朱亚菲的博客</title>
+    <link></link>
+    <description>朱亚菲的博客</description>
+    
+      <item>
+        <title>域名购买</title>
+        <link>/2015/07/06/domain-name-purchase.html</link>
+        <guid isPermaLink="true">/2015/07/06/domain-name-purchase.html</guid>
+        <pubDate>Mon, 06 Jul 2015 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;国内域名购买网站：&lt;a href=&quot;http://www.net.cn/&quot;&gt;http://www.net.cn/&lt;/a&gt;&lt;br /&gt;
+国外域名购买网站：&lt;a href=&quot;http://www.name.com/&quot;&gt;http://www.name.com/&lt;/a&gt;&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>2015阅读书单</title>
+        <link>/2015/03/01/book-list-of-2015.html</link>
+        <guid isPermaLink="true">/2015/03/01/book-list-of-2015.html</guid>
+        <pubDate>Sun, 01 Mar 2015 00:00:00 +0800</pubDate>
+        <description>&lt;h2 id=&quot;section&quot;&gt;穆斯林的葬礼&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;status: 已读&lt;/li&gt;
+  &lt;li&gt;author: 霍达&lt;/li&gt;
+  &lt;li&gt;publisher: 北京十月文艺出版社&lt;/li&gt;
+  &lt;li&gt;language: 中文&lt;/li&gt;
+  &lt;li&gt;link: http://product.dangdang.com/22782674.html&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;苏菲的世界&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;status: 在读&lt;/li&gt;
+  &lt;li&gt;author: Jostein Gaarder&lt;/li&gt;
+  &lt;li&gt;publisher: 作家出版社&lt;/li&gt;
+  &lt;li&gt;language: 中文&lt;/li&gt;
+  &lt;li&gt;link: http://product.dangdang.com/20053088.html&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;视觉机器学习20讲&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;status: 在读&lt;/li&gt;
+  &lt;li&gt;author: 谢剑斌等&lt;/li&gt;
+  &lt;li&gt;publisher: 清华大学出版社&lt;/li&gt;
+  &lt;li&gt;language: 中文&lt;/li&gt;
+  &lt;li&gt;link: http://item.jd.com/1569431555.html&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>在Mac OSX Yosemite 10.10.3上安装OpenCV3.0（包含在Xcode中配置OpenCV）</title>
+        <link>/2014/11/05/install-opencv-in-mac.html</link>
+        <guid isPermaLink="true">/2014/11/05/install-opencv-in-mac.html</guid>
+        <pubDate>Wed, 05 Nov 2014 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;首先交代下安装环境Mac OSX Yosemite 10.10.3，安装的OpenCV为&lt;a href=&quot;http://opencv.org/&quot;&gt;OpenCV官网&lt;/a&gt;上2015-06-04发布的3.0版本，Xcode为6.2 (6C131e)版本。下面详细介绍安装步骤：&lt;/p&gt;
+
+&lt;p&gt;一、安装cmake&lt;br /&gt;
+在终端输入port install cmake。&lt;/p&gt;
+
+&lt;p&gt;二、到OpenCV官网下载Mac/Linux版本的OpenCV&lt;br /&gt;
+&lt;img src=&quot;/figures/OpenCV-DOWNLOADS.png&quot; alt=&quot;OpenCV-DOWNLOADS&quot; /&gt;&lt;br /&gt;
+下载后的文件名为opencv-3.0.0.zip，大小为101MB。双击解压，进入到/Users/fei/software/OpenCV/opencv-3.0.0/路径下，然后新建一个build文件夹，再进到build文件夹下。参考官网输入：&lt;br /&gt;
+cd build&lt;br /&gt;
+cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..&lt;br /&gt;
+make&lt;br /&gt;
+sudo make install&lt;br /&gt;
+至此，OpenCV在Mac上就安装完毕了。&lt;/p&gt;
+
+&lt;p&gt;三、在Xcode中配置OpenCV，并进行测试&lt;br /&gt;
+打开Xcode，新建一个command line工程：工程名字TestOpenCVDemo，注意语言选择C++。这样C++的HelloWorld就建好了，编译应该能正常运行。接下来开始在Xcode中配置OpenCV了。&lt;br /&gt;
+最左边选中工程，然后右边选中Targets，再BuildSettings下，右边搜索框里输入search，很快就能找到Search Paths设置项。在Header Search Paths里输入:/usr/local/include  在Library Search Paths里输入:/usr/local/lib&lt;br /&gt;
+示意图如下：&lt;br /&gt;
+&lt;img src=&quot;/figures/SearchPaths.png&quot; alt=&quot;SearchPaths&quot; /&gt;&lt;br /&gt;
+接着在Build Phases里找到Link Binary With Libraries，点击＋号&lt;br /&gt;
+&lt;img src=&quot;/figures/LinkBinaryWithLibraries.png&quot; alt=&quot;LinkBinaryWithLibraries&quot; /&gt;&lt;br /&gt;
+选择add other，如下图：&lt;br /&gt;
+![AddLibraries](/figures/AddLibraries.png）&lt;br /&gt;
+然后按下／键，输入lib的路径/usr/local/lib,点go：&lt;br /&gt;
+&lt;img src=&quot;/figures/ChooseDirectory.png&quot; alt=&quot;ChooseDirectory&quot; /&gt;&lt;br /&gt;
+然后就是选择OpenCV的库了，这里可以将所有OpenCV的库（以libopencv开头，.dylib格式）都添加上，按下command键可以实现多选。添加完毕后可以在左侧看到：&lt;br /&gt;
+&lt;img src=&quot;/figures/ListsofLibraries.png&quot; alt=&quot;ListsofLibraries&quot; /&gt;&lt;br /&gt;
+在main.cpp里输入以下内容，实现显示原图像及灰度化后图像的功能：&lt;br /&gt;
+&lt;img src=&quot;/figures/Xcode-OpenCV-Example.png&quot; alt=&quot;Xcode-OpenCV-Example&quot; /&gt;&lt;br /&gt;
+运行结果如下：&lt;br /&gt;
+&lt;img src=&quot;/figures/result.png&quot; alt=&quot;result&quot; /&gt;&lt;br /&gt;
+至此大功告成。&lt;/p&gt;
+
+</description>
+      </item>
+    
+      <item>
+        <title>计算机视觉领域常用资源</title>
+        <link>/2013/04/23/general-computervision-resources.html</link>
+        <guid isPermaLink="true">/2013/04/23/general-computervision-resources.html</guid>
+        <pubDate>Tue, 23 Apr 2013 00:00:00 +0800</pubDate>
+        <description>&lt;h3 id=&quot;section&quot;&gt;推荐站点&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://valseonline.org/portal.php&quot;&gt;VALSE在线讨论&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;视觉与学习青年学者研讨会(Vision And Learning SEminar, 简称VALSE)的主要目标是为计算机视觉、图像处理、模式识别与机器学习等研究领域内的华人青年学者提供深入学术交流的舞台。VALSE QQ群：364188996，VALSE-B QQ群：422075165&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;section-1&quot;&gt;开源软件&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.vlfeat.org/&quot;&gt;VLFeat&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;An open source library implements popular computer vision algorithms including HOG, SIFT, MSER, k-means, hierarchical k-means, agglomerative information bottleneck, SLIC superpixels, and quick shift.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+      </item>
+    
+      <item>
+        <title>Mac中在Finder里面打开终端</title>
+        <link>/2012/11/08/open-shell-in-Finder.html</link>
+        <guid isPermaLink="true">/2012/11/08/open-shell-in-Finder.html</guid>
+        <pubDate>Thu, 08 Nov 2012 00:00:00 +0800</pubDate>
+        <description>&lt;p&gt;在开发过程中经常会用到Shell，而我们可以用Mac中一个叫终端的App进入Shell。打开这个App后，默认进入用户的home目录，即“/Users/username”，而这往往不是我们想要的工作目录。因此我们需要敲好几次“cd”命令才可以进入我们的工作目录。这显得很麻烦，其实我们可以利用系统的“服务”来这文件夹的右键菜单中直接加入一个在所选目录打开Shell的功能，而且不用借助任何第三方软件，只需要用系统自带的Automator应用即可。&lt;br /&gt;
+首先打开Automator，在“文件”下点击“新建”，选取文稿类型为“服务”，如下图：&lt;br /&gt;
+&lt;img src=&quot;http://blog.xcodev.com/images/post/automator-create-services.png&quot; alt=&quot;Automator-Create services&quot; /&gt;&lt;br /&gt;
+然后在右侧视图上方，设置为选定“文件夹”和位于“Finder”，如下图：&lt;br /&gt;
+&lt;img src=&quot;http://blog.xcodev.com/images/post/automator-target-setting.png&quot; alt=&quot;Automator-Target setting&quot; /&gt;&lt;br /&gt;
+Automator左侧会显示很多操作，你可以将左侧的操作拖到右侧的视图来在运行时进行这些操作。这里我们需要一个“打开Finder项目的操作”，由于操作实在太多，你可以在搜索框中输入“open”进行搜索。将操作的打开方式设置为“终端”App，如果打开方式中没有这一项，可以选择“其他”，然后在“实用工具”中找到“终端”App。&lt;br /&gt;
+&lt;img src=&quot;http://blog.xcodev.com/images/post/automator-open-in-shell.png&quot; alt=&quot;Automator-Open in shell&quot; /&gt;&lt;br /&gt;
+在菜单中选择保存，保存文件名为“打开终端”。这样当你在Finder中右键一个文件夹时，右键菜单里面的“服务”选择“打开终端”就可以打开当前位置的终端了。类似Linux下面的右键，用终端打开。&lt;/p&gt;
+</description>
+      </item>
+    
+  </channel>
+</rss>

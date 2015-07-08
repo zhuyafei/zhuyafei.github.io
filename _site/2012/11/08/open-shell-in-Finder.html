@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<!--[if lte IE 9]><meta http-equiv="refresh" content="0;url=/ie.html"><![endif]-->
+
+<title>Mac中在Finder里面打开终端 | 朱亚菲的博客</title>
+<meta name="author" content="朱亚菲">
+
+
+
+
+<link rel="shortcut icon" href="http://7u2ho6.com1.z0.glb.clouddn.com/site-favicon.ico" />
+
+<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+
+<link href="/pages/rss.xml" rel="alternate" title="朱亚菲的博客" type="application/atom+xml">
+  </head>
+  <body>
+    <aside id="sidebar">
+  <nav id="tags">
+    <a href="/index.html" id="avatar" style="background-image:url(http://7u2ho6.com1.z0.glb.clouddn.com/site-avatar.png)"></a>
+
+    <ul id="tags__ul">
+      <li id="pl__all" class="tags__li tags-btn active">所有文章</li>
+       
+        <li id="技术" class="tags__li tags-btn">技术</li>
+       
+        <li id="资源" class="tags__li tags-btn">资源</li>
+       
+        <li id="工具" class="tags__li tags-btn">工具</li>
+       
+        <li id="读书" class="tags__li tags-btn">读书</li>
+      
+    </ul>
+
+    <div id="tags__bottom">
+      <a href="mailto:zhuyafei4520@163.com" id="icon-email" class="tags-btn fontello"></a>
+      <a href="/pages/rss.xml" id="icon-feed" class="tags-btn fontello"></a>
+    </div>
+  </nav> <!-- end #tags -->
+
+  <div id="posts-list">
+    <form action="" id="search-form">
+      <a href="/index.html" id="mobile-avatar" style="background-image:url(http://7u2ho6.com1.z0.glb.clouddn.com/site-avatar.png)"></a>
+      <!-- NOTE: input field is disabled by default -->
+      <input id="search-input" type="text" placeholder="Search..." disabled >
+    </form>
+
+    <nav id="pl__container">
+    
+      <a class="技术 pl__all" href="/2015/07/06/domain-name-purchase.html"><span class="pl__circle"></span><span class="pl__title">域名购买</span><span class="pl__date">Jul 2015</span></a>
+    
+      <a class="读书 pl__all" href="/2015/03/01/book-list-of-2015.html"><span class="pl__circle"></span><span class="pl__title">2015阅读书单</span><span class="pl__date">Mar 2015</span></a>
+    
+      <a class="工具 pl__all" href="/2014/11/05/install-opencv-in-mac.html"><span class="pl__circle"></span><span class="pl__title">在Mac OSX Yosemite 10.10.3上安装OpenCV3.0（包含在Xcode中配置OpenCV）</span><span class="pl__date">Nov 2014</span></a>
+    
+      <a class="资源 pl__all" href="/2013/04/23/general-computervision-resources.html"><span class="pl__circle"></span><span class="pl__title">计算机视觉领域常用资源</span><span class="pl__date">Apr 2013</span></a>
+    
+      <a class="技术 pl__all" href="/2012/11/08/open-shell-in-Finder.html"><span class="pl__circle"></span><span class="pl__title">Mac中在Finder里面打开终端</span><span class="pl__date">Nov 2012</span></a>
+    
+    </nav>
+  </div> <!-- end #posts-list -->
+</aside> <!-- end #sidebar -->
+    <div id="post">
+      <div id="pjax">
+        <article id="post__content">
+  <h1 id="post__title" data-identifier="20121108">Mac中在Finder里面打开终端</h1>
+  <p>在开发过程中经常会用到Shell，而我们可以用Mac中一个叫终端的App进入Shell。打开这个App后，默认进入用户的home目录，即“/Users/username”，而这往往不是我们想要的工作目录。因此我们需要敲好几次“cd”命令才可以进入我们的工作目录。这显得很麻烦，其实我们可以利用系统的“服务”来这文件夹的右键菜单中直接加入一个在所选目录打开Shell的功能，而且不用借助任何第三方软件，只需要用系统自带的Automator应用即可。<br />
+首先打开Automator，在“文件”下点击“新建”，选取文稿类型为“服务”，如下图：<br />
+<img src="http://blog.xcodev.com/images/post/automator-create-services.png" alt="Automator-Create services" /><br />
+然后在右侧视图上方，设置为选定“文件夹”和位于“Finder”，如下图：<br />
+<img src="http://blog.xcodev.com/images/post/automator-target-setting.png" alt="Automator-Target setting" /><br />
+Automator左侧会显示很多操作，你可以将左侧的操作拖到右侧的视图来在运行时进行这些操作。这里我们需要一个“打开Finder项目的操作”，由于操作实在太多，你可以在搜索框中输入“open”进行搜索。将操作的打开方式设置为“终端”App，如果打开方式中没有这一项，可以选择“其他”，然后在“实用工具”中找到“终端”App。<br />
+<img src="http://blog.xcodev.com/images/post/automator-open-in-shell.png" alt="Automator-Open in shell" /><br />
+在菜单中选择保存，保存文件名为“打开终端”。这样当你在Finder中右键一个文件夹时，右键菜单里面的“服务”选择“打开终端”就可以打开当前位置的终端了。类似Linux下面的右键，用终端打开。</p>
+
+</article> <!-- end #post__content -->
+
+<div id="post__share">
+  <a id="icon-twitter" class="fontello" href="https://twitter.com/intent/tweet?url=/2012/11/08/open-shell-in-Finder.html&text=Mac中在Finder里面打开终端" target="_blank"></a>
+  <a id="icon-cc" class="fontello" href="http://creativecommons.org/licenses/by-nc-sa/3.0" target="_blank"></a>
+  <a id="icon-weibo" class="fontello" href="http://v.t.sina.com.cn/share/share.php?url=/2012/11/08/open-shell-in-Finder.html&title=Mac中在Finder里面打开终端" target="_blank"></a>
+</div> <!-- end #post__share -->
+<div id="disqus_thread" name="zhuyafei-zh">
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com" class="dsq-brlink" target="_blank">Loading Disqus comments...</a>
+</div>
+
+
+        <p id="copyright">Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>&nbsp;&nbsp;|&nbsp;&nbsp;Theme <a href="https://github.com/P233/3-Jekyll" target="_blank">3-Jekyll</a>&nbsp;&nbsp;|&nbsp;&nbsp;Hosted on <a href="https://pages.github.com" target="_blank">Github</a></p>
+      </div> <!-- end #pjax -->
+
+      <div id="post__toc-trigger">
+        <div id="post__toc">
+          <span id="post__toc-title">Table of Contents</span>
+          <ul id="post__toc-ul"></ul>
+        </div>
+      </div>
+    </div> <!-- end #post -->
+
+    <button id="js-fullscreen"><span id="icon-arrow" class="fontello"></span></button>
+
+<script src="/assets/js/jquery.js"></script>
+<script src="/assets/js/jquery.pjax.js"></script>
+<script src="/assets/js/nprogress.js"></script>
+<script src="/assets/js/script.js"></script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-54767140-1', '');
+  ga('send', 'pageview');
+</script>
+  </body>
+</html>
