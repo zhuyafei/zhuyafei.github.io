@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 在Mac OSX Yosemite 10.10.3上安装OpenCV3.0（包含在Xcode中配置OpenCV）
-category: 工具
+category: 软件安装
 ---
 首先交代下安装环境Mac OSX Yosemite 10.10.3，安装的OpenCV为[OpenCV官网](http://opencv.org/)上2015-06-04发布的3.0版本，Xcode为6.2 (6C131e)版本。下面详细介绍安装步骤：
 
