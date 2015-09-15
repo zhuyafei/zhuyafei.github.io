@@ -10,7 +10,7 @@ category: 资源
 
 ### 下载
 
-- [百度云](http://www.bdyunso.com/)
+- [百度云搜索资源](http://www.bdyunso.com/)
   
 
 
