@@ -23,7 +23,9 @@ category: 技术
 ```
 cat m1 (在屏幕上显示文件m1的内容)
 cat m1 m2 (同时显示文件m1和m2的内容)
-cat m1 m2 > file (将文件m1和m2合并后放入文件file中)	
+cat m1 m2 > file (将文件m1和m2合并后放入文件file中)
+```
+	
 * type命令
 
 
