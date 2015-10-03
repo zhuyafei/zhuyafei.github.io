@@ -18,6 +18,7 @@ rss_url: /pages/atom.xml
 
 # avatar头像及Favicon
 avatar: /figures/zhuyafei.png
+favicon: /figures/zhuyafei.png
 
 # google analytics 设置
 ga:
