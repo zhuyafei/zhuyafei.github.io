@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Photoshop抠图
-category: 工具
+category: 杂货箱
 ---
 Photoshop常见抠图方法有以下几种：
 
