@@ -81,3 +81,10 @@ category: 技术
  26 echo -ne "\tThe number of files with same content is \033[41;37m ${sum} \033    [0m"
  27 fi
 ```
+
+### 4. 列出当前目录下的所有文件夹
+
+```Bash
+ls -d */
+ls -l|grep ^d|awk '{print $9}'
+```
