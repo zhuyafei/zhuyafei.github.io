@@ -9,19 +9,20 @@ category: 技术
 ```Bash
   1 #!/bin/bash
   2 
-  3 if [ $# != 2 ]; then
+  3 if [ $# != 3 ]; then
   4         echo -ne "Arguments Error.\n"
   5         echo -ne "Usage:\n"
-  6         echo -ne "\t$0 <number_all> <number_insert>\n"
+  6         echo -ne "\t$0 <dir> <number_all> <number_insert>\n"
   7         exit 7
   8 else
   9 
- 10 number_all=$1
- 11 number_insert=$2
- 12 
- 13 for ((i=${number_all};i>${number_insert};i=i-1))
- 14 do
- 15         mv ${i}.pdf $[${i}+1].pdf
- 16 done
- 17 fi
+ 10 dir=$1
+ 11 number_all=$2
+ 12 number_insert=$3
+ 13 
+ 14 for ((i=${number_all};i>${number_insert};i=i-1))
+ 15 do
+ 16         mv ${dir}/${i}.pdf ${dir}/$[${i}+1].pdf
+ 17 done
+ 18 fi
 ```
