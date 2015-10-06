@@ -68,18 +68,16 @@ category: 技术
  13 dir2=$2
  14 for i in $(find ${dir1} -type f)
  15 do
- 16         #echo $i
- 17         for j in $(find ${dir2} -type f)
- 18         do
- 19         #               echo $j
- 20                         if cmp -s $i $j
- 21                         then
- 22                                 ((sum++))
- 23                                 echo -ne "${sum}: \033[34m $i \033[0m\t\033[41;33m $j \033[0m\n"
- 24                         fi
- 25         done
- 26 done
- 27 echo -ne "\n"
- 28 echo -ne "\tThe number of files with same content is \033[41;37m ${sum} \033[0m"
- 29 fi
+ 16         for j in $(find ${dir2} -type f)
+ 17         do
+ 18                 if cmp -s $i $j
+ 19                 then
+ 20                         ((sum++))
+ 21                         echo -ne "${sum}: \033[34m $i \033[0m\t\033[41;33m $    j \033[0m\n"
+ 22                 fi
+ 23         done
+ 24 done
+ 25 echo -ne "\n"
+ 26 echo -ne "\tThe number of files with same content is \033[41;37m ${sum} \033    [0m"
+ 27 fi
 ```
