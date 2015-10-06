@@ -26,28 +26,26 @@ category: 技术
  17 done
  18 fi
 ```
-注1：给一个变量赋值的格式为：
-**变量名**=**变量值**，“=”前后不可以有空格。和C语言不同，Shell中不需要显式的语法来声明变量。
+注1：给一个变量赋值的格式为：**变量名**=**变量值**，“=”前后不可以有空格。和C语言不同，Shell中不需要显式的语法来声明变量。
 注2：if与[之间必须有空格，[]与判断条件之间也必须有空格。
 
 2. 将某文件夹下的所有文件（扩展名相同）重新按数字命名。
 
 ```Bash
- 1 \begin{bash}
- 2  #!/bin/bash
- 3 if [ $# != 2 ]; then
- 4 	echo -ne "Arguments Error.\n"
- 5 	echo -ne "Usage:\n"
- 6 	echo -ne "\t$0 <Dir> <Extension>\n"
- 7 	exit 7
- 8 else
- 9 num=1
- 10 dir=$1
- 11 Extension=$2
- 12 for i in $(find ${dir} -type f)
- 13 do
- 14 	mv $i $dir/${num}.${Extension}
- 15 	((num++))
- 16 done
- 17 fi
+ 1  #!/bin/bash
+ 2 if [ $# != 2 ]; then
+ 3 	echo -ne "Arguments Error.\n"
+ 4 	echo -ne "Usage:\n"
+ 5 	echo -ne "\t$0 <Dir> <Extension>\n"
+ 6 	exit 7
+ 7 else
+ 8 num=1
+ 9 dir=$1
+ 10 Extension=$2
+ 11 for i in $(find ${dir} -type f)
+ 12 do
+ 13 	mv $i $dir/${num}.${Extension}
+ 14 	((num++))
+ 15 done
+ 16 fi
 ```
