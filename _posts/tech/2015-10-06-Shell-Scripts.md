@@ -88,3 +88,9 @@ category: 技术
 ls -d */
 ls -l|grep ^d|awk '{print $9}'
 ```
+
+### 5. A文件夹下有1000幅bmp格式的图片，B文件夹下有5000幅jpg格式的图片，要从这5000幅图片中找到1000幅与A文件夹中文件名相同但扩展名不同的图片，放到C文件夹中。
+
+```Bash
+for i in $(ls *.bmp);do cp ${i%.bmp}.jpg C/;done
+```
