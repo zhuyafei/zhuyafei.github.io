@@ -4,7 +4,7 @@ title: shell脚本
 category: 技术
 ---
 
-## 1. 某文件夹下有number_all个pdf格式的文件，文件按数字1~number_all命名，如果要在中间加入一个文件（如：27.pdf），那么原文件夹中的文件从27开始就要依次加1以留出空隙。
+### 1. 某文件夹下有number_all个pdf格式的文件，文件按数字1~number_all命名，如果要在中间加入一个文件（如：27.pdf），那么原文件夹中的文件从27开始就要依次加1以留出空隙。
 
 ```Bash
   1 #!/bin/bash
@@ -29,7 +29,7 @@ category: 技术
 注1：给一个变量赋值的格式为：**变量名**=**变量值**，“=”前后不可以有空格。和C语言不同，Shell中不需要显式的语法来声明变量。
 注2：if与[之间必须有空格，[]与判断条件之间也必须有空格。
 
-## 2. 将某文件夹下的所有文件（扩展名相同）重新按数字命名。
+### 2. 将某文件夹下的所有文件（扩展名相同）重新按数字命名。
 
 ```Bash
  1  #!/bin/bash
@@ -48,4 +48,38 @@ category: 技术
  14 	((num++))
  15 done
  16 fi
+```
+
+### 3. 两个文件夹下有相同数目的图片，其图片名不一样，但内容可能一样，编写脚本看其中有多少幅内容是一样的。
+
+```Bash
+  1 #!/bin/bash
+  2 
+  3 if [ $# != 2 ]; then
+  4         echo -ne "Arguments Error.\n"
+  5         echo -ne "Usage:\n"
+  6         echo -ne "\t$0 <Dir1> <Dir2>\n"
+  7         exit 7
+  8 
+  9 else
+ 10 
+ 11 sum=0
+ 12 dir1=$1
+ 13 dir2=$2
+ 14 for i in $(find ${dir1} -type f)
+ 15 do
+ 16         #echo $i
+ 17         for j in $(find ${dir2} -type f)
+ 18         do
+ 19         #               echo $j
+ 20                         if cmp -s $i $j
+ 21                         then
+ 22                                 ((sum++))
+ 23                                 echo -ne "${sum}: \033[34m $i \033[0m\t\033[41;33m $j \033[0m\n"
+ 24                         fi
+ 25         done
+ 26 done
+ 27 echo -ne "\n"
+ 28 echo -ne "\tThe number of files with same content is \033[41;37m ${sum} \033[0m"
+ 29 fi
 ```
