@@ -73,12 +73,12 @@ category: 技术
  18                 if cmp -s $i $j
  19                 then
  20                         ((sum++))
- 21                         echo -ne "${sum}: \033[34m $i \033[0m\t\033[41;33m $    j \033[0m\n"
+ 21                         echo -ne "${sum}: \033[34m $i \033[0m\t\033[41;33m $j \033[0m\n"
  22                 fi
  23         done
  24 done
  25 echo -ne "\n"
- 26 echo -ne "\tThe number of files with same content is \033[41;37m ${sum} \033    [0m"
+ 26 echo -ne "\tThe number of files with same content is \033[41;37m ${sum} \033[0m"
  27 fi
 ```
 
