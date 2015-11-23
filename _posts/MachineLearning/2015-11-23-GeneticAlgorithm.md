@@ -23,6 +23,7 @@ category: 机器学习
 Holland等于1975年提出了遗传算法，遗传算法使用确定长度的二进制位串作为遗传编码。
 
 ### GP (Genetic Programming)
-
+遗传编程的首批实验由Stephen F. Smith（1980年）和Nichael Cramer（1985年）发表。John R. Koza于1992年写了一本著名的书"Genetic Programming: On the Programming of Computers by Means of Natural Selection"来介绍遗传编程。
 ### GEP (Gene Expression Programming)
 基因表达式编程是葡萄牙学者Candida于2001年首次提出的一种新型的进化计算算法。
+GEP有其特有的算子--插串。
