@@ -27,7 +27,7 @@ Holland等于1975年提出了遗传算法，遗传算法使用确定长度的二
 ### GP (Genetic Programming)
 遗传编程的首批实验由Stephen F. Smith（1980年）和Nichael Cramer（1985年）发表。John R. Koza于1992年写了一本著名的书"Genetic Programming: On the Programming of Computers by Means of Natural Selection"来介绍遗传编程。
 GP在实现变异算子时不是十分有效，因为大部分变异操作会产生句法上错误的结构，如下图：
-![SearchPaths](/figures/GeneticProgramming.png)
+![GeneticProgramming](/figures/GeneticProgramming.png)
 
 优缺点：GP个体编码复杂，因此操作方便，且遗传操作不具备封闭性，很多资源消耗在处理无效结构上，但常用于求解复杂问题。
 
@@ -40,4 +40,4 @@ GEP是唯一的多基因遗传算法。
 每个GEP基因都是由头部和尾部组成，头部可以包含终结符和函数符号，而尾部只能包含终结符。终结符是指程序中的输入、常量以及没有参数的函数。函数符号可以是相关问题领域中的运算符号（如+, -, *, /, sin, cos等），也可以是程序设计中的一个程序构件。
 头部的长度h通常依具体问题而定，而尾部的长度t则由公式t=h*(n-1)+1得到，其中n是所使用的函数集中需要变量最多的函数的参数个数。
 把基因解码为表达式树，基因中所有符号不一定会全部出现在表达树中，这样是为了保证不会产生无效结构，示例如下：
-![SearchPaths](/figures/GeneticProgramming-tree.png)
+![GeneticProgramming-tree](/figures/GeneticProgramming-tree.png)
