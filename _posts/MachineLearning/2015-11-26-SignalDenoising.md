@@ -36,7 +36,7 @@ result = waverec(nc, l, 'db5');
 %对含噪信号origin求消噪的阈值
 [thr, sorh, keepapp] = ddencmp('den', 'wv', origin);
 %对信号进行消噪
-result = wdencmp('gbl', nx, 'db4', 2, thr, sorh, keepapp);
+result = wdencmp('gbl', origin, 'db4', 2, thr, sorh, keepapp);
 ```
 
 ```Matlab
