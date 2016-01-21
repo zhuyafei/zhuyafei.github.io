@@ -16,14 +16,14 @@ category: 技术
   7         exit 7
   8 else
   9 
- 10 dir=$1
- 11 number_all=$2
- 12 number_insert=$3
+ 10 	dir=$1
+ 11 	number_all=$2
+ 12 	number_insert=$3
  13 
- 14 for ((i=${number_all};i>${number_insert};i=i-1))
- 15 do
- 16         mv ${dir}/${i}.pdf ${dir}/$[${i}+1].pdf
- 17 done
+ 14 	for ((i=${number_all};i>=${number_insert};i=i-1))
+ 15 	do
+ 16		mv ${dir}/${i}.pdf ${dir}/$[${i}+1].pdf
+ 17 	done
  18 fi
 ```
 注1：给一个变量赋值的格式为：**变量名**=**变量值**，“=”前后不可以有空格。和C语言不同，Shell中不需要显式的语法来声明变量。
@@ -93,4 +93,9 @@ ls -l|grep ^d|awk '{print $9}'
 
 ```Bash
 for i in $(ls *.bmp);do cp ${i%.bmp}.jpg C/;done
+```
+
+### 6. 查看当前目录下的所有文件，包括子文件夹中的
+```Bash
+ls -lR|grep "^-"|awk '{print $9}'
 ```
