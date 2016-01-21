@@ -10,10 +10,10 @@ category: 技术
   1 #!/bin/bash
   2 
   3 if [ $# != 3 ]; then
-  4         echo -ne "Arguments Error.\n"
-  5         echo -ne "Usage:\n"
-  6         echo -ne "\t$0 <dir> <number_all> <number_insert>\n"
-  7         exit 7
+  4	echo -ne "Arguments Error.\n"
+  5	echo -ne "Usage:\n"
+  6	echo -ne "\t$0 <dir> <number_all> <number_insert>\n"
+  7	exit 7
   8 else
   9 
  10 	dir=$1
