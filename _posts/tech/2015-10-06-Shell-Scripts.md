@@ -32,21 +32,21 @@ category: 技术
 ### 2. 将某文件夹下的所有文件（扩展名相同）重新按数字命名。
 
 ```Bash
- 1  #!/bin/bash
+ 1 #!/bin/bash
  2 if [ $# != 2 ]; then
  3 	echo -ne "Arguments Error.\n"
  4 	echo -ne "Usage:\n"
  5 	echo -ne "\t$0 <Dir> <Extension>\n"
  6 	exit 7
  7 else
- 8 num=1
- 9 dir=$1
- 10 Extension=$2
- 11 for i in $(find ${dir} -type f)
- 12 do
- 13 	mv $i $dir/${num}.${Extension}
- 14 	((num++))
- 15 done
+ 8 	num=1
+ 9	dir=$1
+ 10	Extension=$2
+ 11	for i in $(find ${dir} -type f)
+ 12	do
+ 13		mv $i $dir/${num}.${Extension}
+ 14		((num++))
+ 15	done
  16 fi
 ```
 
@@ -95,7 +95,7 @@ ls -l|grep ^d|awk '{print $9}'
 for i in $(ls *.bmp);do cp ${i%.bmp}.jpg C/;done
 ```
 
-### 6. 查看当前目录下的所有文件，包括子文件夹中的
+### 6. 列车当前目录下的所有文件，包括子文件夹中的
 ```Bash
-ls -lR|grep "^-"|awk '{print $9}'
+ls -lR|grep ^-|awk '{print $9}'
 ```
