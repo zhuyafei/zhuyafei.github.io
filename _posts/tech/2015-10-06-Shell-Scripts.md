@@ -99,3 +99,4 @@ for i in $(ls *.bmp);do cp ${i%.bmp}.jpg C/;done
 ```Bash
 ls -lR|grep ^-|awk '{print $9}'
 ```
+
