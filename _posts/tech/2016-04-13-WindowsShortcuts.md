@@ -4,15 +4,19 @@ title: Windows下常用快捷键整理
 category: 技术
 ---
 
+Ctrl+T：打开新的标签页
 Ctrl+W：关闭当前标签页
 Alt+F4：关闭当前活动应用程序窗口
 Win+E：打开我的电脑
-Ctrl+Alt+Delete：打开任务管理器
+Ctrl+Shift+Esc：打开任务管理器
+Ctrl+Alt+Delete：锁定计算机，再单击任务管理器可打开任务管理器
 Win+D：显示桌面
 Win+M：显示桌面（将所有窗口最小化）
 Shift+Delete：彻底删除
 F2：重命名
 Win+L：屏幕锁定
+Alt+Tab：按住Alt键，然后每按一次Tab键即可切换一次应用程序
+Win+Tab：与上一条作用相同，只是切换时显示效果不同
 Win+↑：最大化窗口
 Win+↓：还原/最小化窗口
 Win+←：使窗口占领左侧的一半屏幕
